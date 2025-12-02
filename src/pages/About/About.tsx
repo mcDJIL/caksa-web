@@ -6,6 +6,7 @@ import Story from '@/src/components/sections/About/Story';
 import Vision from '../../components/sections/About/Vision';
 import Figure from '../../components/sections/About/Figure';
 import Team from '../../components/sections/About/Team';
+import Achievement from '@/src/components/sections/Home/Achivement';
 
 const AboutPage = () => {
   return (
@@ -31,6 +32,7 @@ const AboutPage = () => {
       <Vision />
       <Figure />
       <Team />
+      <Achievement />
     </>
   );
 };

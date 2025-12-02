@@ -6,7 +6,7 @@
 }
 
 .hamburgerLine {
-  @apply w-[30px] h-[2px] my-2 block bg-white;
+  @apply w-[30px] h-[2px] my-2 block bg-white transition-all duration-300 ease-in-out origin-top-left;
 }
 
 .hamburgerActive > span:nth-child(1) {
@@ -14,11 +14,11 @@
 }
 
 .hamburgerActive > span:nth-child(2) {
-  @apply scale-0;
+  @apply scale-0 opacity-0;
 }
 
 .hamburgerActive > span:nth-child(3) {
-  @apply -rotate-45;
+  @apply -rotate-45 origin-bottom-left;
 }
 
 @keyframes spin{

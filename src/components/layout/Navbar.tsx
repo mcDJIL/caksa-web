@@ -37,18 +37,7 @@ const Navbar = () => {
   }, [prevScrollPos]);
 
   const hamburgerHandler = () => {
-    const hamburger = document.querySelector('#hamburger');
-    const navMenu = document.querySelector('#navMenu');
-
     setIsOpen(!isOpen);
-
-    if (isOpen) {
-      hamburger?.classList.remove('hamburger-active');
-      navMenu?.classList.add('hidden');
-    } else {
-      hamburger?.classList.add('hamburger-active');
-      navMenu?.classList.remove('hidden');
-    }
   };
 
   const navbarStyle = {
@@ -76,23 +65,23 @@ const Navbar = () => {
                 id="hamburger"
                 name="hamburger"
                 type="button"
-                className="absolute block right-4 lg:hidden"
+                className={classNames(
+                  "absolute block right-4 lg:hidden",
+                  isOpen ? "hamburgerActive" : ""
+                )}
                 onClick={hamburgerHandler}
               >
-                <span
-                  className={`hamburger-line origin-top-left transition duration-300 ease-in-out`}
-                ></span>
-                <span
-                  className={`hamburger-line transition duration-300 ease-in-out`}
-                ></span>
-                <span
-                  className={`hamburger-line origin-bottom-left transition duration-300 ease-in-out`}
-                ></span>
+                <span className="hamburgerLine"></span>
+                <span className="hamburgerLine"></span>
+                <span className="hamburgerLine"></span>
               </button>
 
               <nav
                 id="navMenu"
-                className="hidden absolute py-4 bg-[#121212]/50 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-20 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+                className={classNames(
+                  "absolute py-4 bg-[#121212]/50 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-20 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none",
+                  isOpen ? "block" : "hidden"
+                )}
               >
                 <div className="flex flex-col justify-between w-full lg:items-center lg:flex-row">
                   <ul className="block lg:flex">
