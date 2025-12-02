@@ -36,7 +36,7 @@ const Team = () => {
         <div className="w-full py-10 px-8 bg-linear-to-r from-[#282624] to-transparent">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Advisor Text - Left */}
-            <div className="flex-1 text-right text-white pr-4">
+            <div className="flex-1 text-center md:text-right text-white pr-4">
               <p className="hidden lg:block lg:text-[10px] xl:text-xs 2xl:text-base">
                 "As the advisor of CAKSA, I am proud to guide this talented team. Together, we push boundaries and explore new horizons in UAV technology."
               </p>
@@ -84,7 +84,7 @@ const Team = () => {
             </div>
 
             {/* Leader Text - Right */}
-            <div className="flex-1 text-left text-white pl-4">
+            <div className="flex-1 text-center md:text-left text-white pl-4">
               <p className="hidden lg:block lg:text-[10px] xl:text-xs 2xl:text-base">
                 "Embracing the skies with a spirit of innovation, I am honored to lead the CAKSA team. Together, we navigate uncharted territories, fueled by dedication and a shared vision for UAV excellence."
               </p>

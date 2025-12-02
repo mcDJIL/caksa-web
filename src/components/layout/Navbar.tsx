@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <header style={navbarStyle} className="fixed z-50 w-full">
-      <div className="mx-8 my-5 md:mx-14 md:my-8 lg:mx-16 lg:my-9">
+      <div className="mx-8 my-5 md:mx-6 md:my-8 lg:mx-10 xl:mx-16 lg:my-9">
         <div className="w-full p-1 lg:p-0 bg-[#121212]/50 border-gray-200 rounded-lg">
           <div className="relative flex items-center justify-between">
             <div className="lg:px-7 lg:py-1 sm:px-4 ">

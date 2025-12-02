@@ -228,7 +228,7 @@ export default function Gallery() {
         <div className="absolute top-[20%] -right-[10%] w-[40%] h-[60%] bg-[#f58a07]/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 lg:px-10 xl:px-20 2xl:px-[117px] py-20">
+      <div className="relative z-10 px-4 lg:px-10 xl:px-20 2xl:px-[117px] py-20">
         
         {/* Header */}
         <div className="mb-16">
