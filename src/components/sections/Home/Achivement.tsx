@@ -24,7 +24,7 @@ const Achievement = () => {
       event: "International UAV Innovation",
       desc: "Recognized for the groundbreaking fuselage design of the 'Sky Warden' which reduced drag coefficient by 15% compared to previous iterations.",
       icon: Star,
-      image: "https://images.unsplash.com/photo-1559067096-49ebca56c311?auto=format&fit=crop&q=80&w=800"
+      image: "https://plus.unsplash.com/premium_photo-1661856767121-703740e85af9?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       year: "2021",

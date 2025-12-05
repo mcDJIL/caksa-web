@@ -1,10 +1,11 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float, Environment, Stars, useGLTF, Center } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { 
+  Loader2,
   MousePointer2
 } from 'lucide-react';
 
@@ -17,7 +18,7 @@ const GacorDrone = () => {
     <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
       <Center top>
         {/* Scale diperkecil agar tidak menutupi kamera (penyebab layar putih) */}
-        {/* Diubah menjadi 0.5 agar lebih kecil dan pas di tengah */}
+        {/* Diubah menjadi 0.1 agar lebih kecil dan pas di tengah */}
         <primitive object={scene} scale={0.1} />
       </Center>
     </Float>
@@ -26,12 +27,15 @@ const GacorDrone = () => {
 
 const SceneContainer = () => {
   return (
-    // DPR diset ke 1 untuk performa lebih ringan
-    <Canvas shadows dpr={1} camera={{ position: [0, 0, 10], fov: 40 }}>
+    // OPTIMASI PERFORMA:
+    // 1. shadows={false}: Mematikan bayangan (berat di GPU)
+    // 2. dpr={1}: Menjaga resolusi standar agar tidak berat di layar retina/4k
+    // 3. gl={{ antialias: true }}: Menjaga pinggiran halus tapi performan
+    <Canvas shadows={false} dpr={1} gl={{ antialias: true }} camera={{ position: [0, 0, 10], fov: 40 }}>
       <Suspense fallback={null}>
-        {/* Lighting yang lebih soft */}
+        {/* Lighting yang lebih soft & Tanpa Shadow map */}
         <ambientLight intensity={1} />
-        <directionalLight position={[10, 10, 5]} intensity={2} castShadow />
+        <directionalLight position={[10, 10, 5]} intensity={2} />
         <spotLight position={[-10, 10, -5]} intensity={1} color="#084887" />
         
         <Environment preset="city" />
@@ -40,8 +44,8 @@ const SceneContainer = () => {
           <GacorDrone />
         </group>
         
-        {/* Jumlah bintang dikurangi untuk performa */}
-        <Stars radius={100} depth={50} count={1000} factor={4} saturation={0} fade speed={1} />
+        {/* Jumlah bintang dikurangi drastis untuk performa (1000 -> 500) */}
+        <Stars radius={100} depth={50} count={500} factor={4} saturation={0} fade speed={1} />
         <OrbitControls 
           enableZoom={true} 
           enablePan={false}
@@ -58,8 +62,33 @@ const SceneContainer = () => {
 };
 
 const PrototypeViewer = () => {
+  // State untuk melacak apakah komponen sudah masuk viewport
+  const [inView, setInView] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    // Intersection Observer untuk mendeteksi kapan user scroll ke bagian ini
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect(); // Hanya perlu load sekali
+        }
+      },
+      { 
+        rootMargin: '200px' // Load 200px sebelum elemen muncul di layar (Preload)
+      } 
+    );
+    
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="prototype" className="relative w-full bg-black flex flex-col justify-center py-20">
+    <section ref={ref} id="prototype" className="relative w-full bg-black flex flex-col justify-center py-20">
       {/* Dark section for 3D viewer to pop */}
       
       {/* Header for the section */}
@@ -78,23 +107,37 @@ const PrototypeViewer = () => {
       </div>
 
       {/* The 3D Canvas Container - FULL WIDTH style again */}
-      <div className="w-full h-[75vh] border-y border-white/10 bg-gradient-to-b from-slate-900 to-black relative">
-          <SceneContainer />
+      <div className="w-full h-[75vh] border-y border-white/10 bg-gradient-to-b from-slate-900 to-black relative flex items-center justify-center">
           
-          {/* Overlay Controls */}
-          <div className="absolute bottom-10 right-10">
-              <div className="flex items-center gap-2 text-white/70 text-sm bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 font-medium">
-                  <MousePointer2 className="w-4 h-4" />
-                  <span>Drag to rotate</span>
-              </div>
-          </div>
+          {/* PERFORMA FIX: 
+            Render SceneContainer HANYA jika 'inView' true.
+            Ini mencegah download model 5MB+ saat initial load halaman.
+          */}
+          {inView ? (
+             <SceneContainer />
+          ) : (
+             <div className="flex flex-col items-center gap-2 text-slate-500">
+                <Loader2 className="w-8 h-8 animate-spin text-[#f58a07]" />
+                <span className="text-xs uppercase tracking-widest">Initializing Lab...</span>
+             </div>
+          )}
+          
+          {/* Overlay Controls (Only show if loaded) */}
+          {inView && (
+            <div className="absolute bottom-10 right-10">
+                <div className="flex items-center gap-2 text-white/70 text-sm bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 font-medium">
+                    <MousePointer2 className="w-4 h-4" />
+                    <span>Drag to rotate</span>
+                </div>
+            </div>
+          )}
 
           {/* Overlay Info */}
           <div className="absolute top-10 left-10 hidden sm:block">
                <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10">
                   <div className="flex flex-col gap-1 text-xs font-mono text-[#f58a07]">
-                      <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" /> SYSTEM ONLINE</div>
-                      <div>MK-I PROTOTYPE</div>
+                      <div className="flex items-center gap-2"><div className={`w-2 h-2 rounded-full ${inView ? 'bg-green-500 animate-pulse' : 'bg-yellow-500'} `} /> SYSTEM {inView ? 'ONLINE' : 'STANDBY'}</div>
+                      <div>GACOR X1</div>
                   </div>
                </div>
           </div>

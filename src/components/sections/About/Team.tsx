@@ -6,8 +6,7 @@ import 'swiper/css';
 
 import { carousel, nontechnical, technical } from '../../../data/about.constant';
 
-const leader = '/assets/img/team/leader/leader.png';
-const advisor = '/assets/img/team/advisor/advisor.png';
+const leaderAdvisor = '/assets/img/team/leader-advisor.png';
 
 const Team = () => {
   const [onHover, setOnHover] = useState(false);
@@ -50,33 +49,21 @@ const Team = () => {
 
             {/* Images - Center */}
             <div className="relative flex items-end justify-center gap-1 flex-shrink-0">
-              {/* Advisor Image */}
               <div className="relative group flex items-center justify-center">
                 <img
-                  src={advisor}
-                  alt="advisor"
-                  title="Advisor"
-                  className="w-[200px] md:w-[280px] grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
+                  src={leaderAdvisor}
+                  alt="leader-advisor"
+                  title="Leader & Advisor"
+                  className="w-[200px] md:w-[380px] grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
                   loading="lazy"
                 />
                 <span
-                  className="pointer-events-none z-10 absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-1 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 ease-out bg-black/80 text-white px-3 py-1 rounded-md text-md shadow-md"
+                  className="bg-[#084887] italic font-semibold border border-[#F58A07] pointer-events-none z-10 absolute bottom-6 left-[10%] opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 ease-out text-white px-4 py-0.5 rounded-lg text-lg shadow-md"
                 >
                   Advisor
                 </span>
-              </div>
-
-              {/* Leader Image */}
-              <div className="relative group flex items-center justify-center">
-                <img
-                  src={leader}
-                  alt="leader"
-                  title="Leader"
-                  className="w-[200px] md:w-[280px] grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
-                  loading="lazy"
-                />
                 <span
-                  className="pointer-events-none z-10 absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-1 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 ease-out bg-black/80 text-white px-3 py-1 rounded-md text-md shadow-md"
+                  className="bg-[#084887] italic font-semibold border border-[#F58A07] pointer-events-none z-10 absolute bottom-6 right-[10%] opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 ease-out text-white px-4 py-0.5 rounded-lg text-lg shadow-md"
                 >
                   Leader
                 </span>
