@@ -12,10 +12,10 @@ interface UavItem {
 
 const uavs: UavItem[] = [
     { name: "Gacor X1", img: "/assets/img/model/gacor-x1.png" },
-    { name: "Albatross V2", img: "/assets/img/model/gacor-x1.png" },
-    { name: "Rama Scout", img: "/assets/img/model/gacor-x1.png" },
-    { name: "Nusantara Aero", img: "/assets/img/model/gacor-x1.png" },
-    { name: "Cakra Surveyor", img: "/assets/img/model/gacor-x1.png" }
+    { name: "Galakasa", img: "/assets/img/model/galakasa.png" },
+    { name: "Anak Lanang", img: "/assets/img/model/anak-lanang.png" },
+    { name: "Umar", img: "/assets/img/model/umar.png" },
+    { name: "Gacor X1", img: "/assets/img/model/gacor-x1.png" },
 ];
 
 const UavCard = ({ item }: { item: UavItem }) => {
@@ -80,13 +80,13 @@ const OurUav = () => {
                         centeredSlides
                         breakpoints={{
                             0: { slidesPerView: 1, spaceBetween: 20 },
-                            768: { slidesPerView: 3, spaceBetween: 32 }
+                            1024: { slidesPerView: 3, spaceBetween: 20 }
                         }}
                         className="select-none"
                         id="uavs"
                     >
-                        {uavs.map((uav) => (
-                            <SwiperSlide key={uav.name} className="group/slide cursor-grab active:cursor-grabbing py-8">
+                        {uavs.map((uav, index) => (
+                            <SwiperSlide key={`${uav.name}-${index}`} className="group/slide cursor-grab active:cursor-grabbing py-8">
                                 <UavCard item={uav} />
                             </SwiperSlide>
                         ))}
