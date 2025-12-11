@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Djarum = '/assets/img/partner/djarum_platinum.jpg';
+const Clev = '/assets/img/partner/clev-innovation-labs.png';
 const Akhishop = '/assets/img/partner/akhishop.png';
 const Isen = '/assets/img/partner/isen.png';
 const Istana = '/assets/img/partner/istana.png';
@@ -16,10 +16,10 @@ const Support = () => {
       </h1>
       <div className="grid grid-cols-1 gap-10 px-5 mt-16 place-items-center">
         <div className="grid grid-cols-1 gap-10">
-          <img src={Djarum} alt="support" className="bg-cover" loading="lazy" />
+          <img src={Clev} alt="support" className="bg-cover" loading="lazy" />
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        {/* <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <img
             src={Akhishop}
             alt="support"
@@ -59,7 +59,7 @@ const Support = () => {
             className="w-auto h-auto bg-cover md:h-36 md:w-60"
             loading="lazy"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

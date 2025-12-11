@@ -7,6 +7,10 @@ const Theater = '/assets/img/partner/theater.png';
 const Spectrum = '/assets/img/partner/spectrum.png';
 const Buaya = '/assets/img/partner/buaya.png';
 
+const Logo = '/assets/img/partner/logo.png';
+const LogoIpsum = '/assets/img/partner/logo-ipsum.png';
+const LogoIpsum2 = '/assets/img/partner/logo-ipsum-2.png';
+
 const SilverSupport = () => {
   return (
     <div className="mt-20">
@@ -15,6 +19,26 @@ const SilverSupport = () => {
       </h1>
       <div className="grid grid-cols-1 gap-10 px-5 mt-16 place-items-center">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
+          <img
+            src={LogoIpsum}
+            alt="support"
+            className="w-auto h-auto bg-cover md:w-44"
+            loading="lazy"
+          />
+          <img
+            src={Logo}
+            alt="support"
+            className="w-auto h-auto bg-cover md:w-44"
+            loading="lazy"
+          />
+          <img
+            src={LogoIpsum2}
+            alt="support"
+            className="w-auto h-auto bg-cover md:w-44"
+            loading="lazy"
+          />
+        </div>
+        {/* <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
           <img
             src={Akhishop}
             alt="support"
@@ -33,9 +57,9 @@ const SilverSupport = () => {
             className="w-auto h-auto bg-cover md:w-44"
             loading="lazy"
           />
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           <img
             src={Theater}
             alt="support"
@@ -60,7 +84,7 @@ const SilverSupport = () => {
             className="w-auto h-auto bg-cover md:w-44"
             loading="lazy"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { classNames } from '../../../lib/classNames';
 import PlatinumSupport from './PlatinumSupport';
 
-const Djarum = '/assets/img/partner/djarum_platinum.jpg';
+const Clev = '/assets/img/partner/clev-innovation-labs.png';
 const VideoDjarum = '/assets/video/djarum.mp4';
 
 const GoldSupport = () => {
@@ -17,7 +17,7 @@ const GoldSupport = () => {
       </h1>
       <div className="flex flex-col items-center justify-between gap-20 mt-24 lg:flex-row">
         <img
-          src={Djarum}
+          src={Clev}
           alt="gold support"
           className="bg-center bg-cover w-96 rounded-2xl lg:hidden"
           loading="lazy"
@@ -33,7 +33,7 @@ const GoldSupport = () => {
         </div>
         <div className="flex-1">
           <img
-            src={Djarum}
+            src={Clev}
             alt=""
             className="hidden bg-center bg-cover w-96 rounded-2xl lg:block"
             loading="lazy"
@@ -42,12 +42,7 @@ const GoldSupport = () => {
             Djarum Foundation Bakti Pendidikan
           </h1>
           <p className="text-xl text-justify pt-7">
-            Djarum Foundation Bakti Pendidikan adalah program yang
-            diselenggarakan oleh Djarum Foundation yang bertujuan untuk
-            meningkatkan akses dan kualitas pendidikan di Indonesia. Program ini
-            memberikan bantuan berupa beasiswa, pembangunan fasilitas
-            pendidikan, pelatihan guru, dan berbagai kegiatan lain yang
-            mendukung pendidikan di Indonesia.{' '}
+            Clev Innovation Labs adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius voluptatibus necessitatibus esse asperiores, modi repellat ea fugit tenetur quis voluptate laboriosam veritatis magni, architecto velit, rerum unde ut accusantium non..{' '}
           </p>
           <div className="flex justify-center w-full pt-8 lg:justify-start font-poppins">
             <a
