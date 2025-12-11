@@ -3,6 +3,7 @@ import React from 'react';
 
 import Hero from '../../components/sections/Home/Hero';
 import Gallery from '../../components/sections/Gallery/Gallery';
+import UAVHallOfFame from '@/src/components/sections/Gallery/UAVHallOfFame';
 
 const GalleryPage = () => {
   return (
@@ -29,6 +30,7 @@ const GalleryPage = () => {
       />
 
       <Gallery />
+      <UAVHallOfFame />
     </>
   );
 };

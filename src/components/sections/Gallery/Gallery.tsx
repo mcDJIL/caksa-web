@@ -24,13 +24,13 @@ const COMPETITIONS = [
     year: "2025",
     location: "Singapore",
     category: "International",
-    result: "Category D1 Champions",
-    description: "Our team deployed the 'Cakrawala X1', a hybrid VTOL focused on fully autonomous payload delivery in urban environments. The mission required precise dropping mechanisms and obstacle avoidance using LIDAR.",
+    result: "Category D1 Man-Machine Champions",
+    description: "Our team deployed the 'Umar', a hybrid VTOL focused on fully autonomous payload delivery in urban environments. The mission required precise dropping mechanisms and obstacle avoidance using LIDAR.",
     uav: {
-      name: "Cakrawala X1",
+      name: "Umar",
       type: "Hybrid VTOL",
       specs: "4.5kg MTOW | 45min Endurance",
-      image: "https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&q=80&w=800"
+      image: "/assets/img/model/umar.png"
     },
     gallery: [
       "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80&w=800",
@@ -42,19 +42,43 @@ const COMPETITIONS = [
     ]
   },
   {
-    id: 'teknofest-2023',
-    title: "Teknofest 2023",
+    id: 'safmc-2024',
+    title: "SAFMC 2024",
+    fullTitle: "Singapore Amazing Flying Machine Competition",
+    year: "2024",
+    location: "Singapore",
+    category: "International",
+    result: "Top 10 CAT D1 Semi-Autonomous",
+    description: "Our team deployed the 'Anak Lanang', a semi-autonomous VTOL focused on fully autonomous payload delivery in urban environments. The mission required precise dropping mechanisms and obstacle avoidance using LIDAR.",
+    uav: {
+      name: "Anak Lanang",
+      type: "Semi-Autonomous VTOL",
+      specs: "4.5kg MTOW | 45min Endurance",
+      image: "/assets/img/model/anak-lanang.png"
+    },
+    gallery: [
+      "/assets/img/gallery/safmc-2024/3.JPG",
+      "/assets/img/gallery/safmc-2024/1.JPG",
+      "/assets/img/gallery/safmc-2024/5.JPG",
+      "/assets/img/gallery/safmc-2024/2.JPG",
+      "/assets/img/gallery/safmc-2024/4.JPG",
+      "/assets/img/gallery/safmc-2024/6.jpg",
+    ]
+  },
+  {
+    id: 'teknofest-2024',
+    title: "Teknofest 2024",
     fullTitle: "Teknofest Aerospace & Technology Festival",
     year: "2023",
     location: "Istanbul, Turkey",
     category: "International",
-    result: "Finalist - Fighter UAV",
+    result: "Finalist International UAV Competition",
     description: "Our first international exposure. We learned valuable lessons regarding autonomy in high-wind conditions. The Garuda MK-II demonstrated robust telemetry links over long distances.",
     uav: {
-      name: "Garuda MK-II",
-      type: "Rotary Wing Hexacopter",
+      name: "Galakasa",
+      type: "Fixed Wing UAV",
       specs: "Heavy Lift | Redundant Flight Controller",
-      image: "https://images.unsplash.com/photo-1504890001746-a9a68eda46e2?auto=format&fit=crop&q=80&w=800"
+      image: "/assets/img/model/galakasa.png"
     },
     gallery: [
       "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=800",
@@ -63,6 +87,30 @@ const COMPETITIONS = [
       "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80&w=800",
+    ]
+  },
+  {
+    id: 'teknofest-2023',
+    title: "Teknofest 2023",
+    fullTitle: "Teknofest Aerospace & Technology Festival",
+    year: "2023",
+    location: "Istanbul, Turkey",
+    category: "International",
+    result: "2nd Runner-Up International Startup Competition",
+    description: "Our first international exposure. We learned valuable lessons regarding autonomy in high-wind conditions. The Garuda MK-II demonstrated robust telemetry links over long distances.",
+    uav: {
+      name: "Gacor X1",
+      type: "Fixed Wing UAV",
+      specs: "Heavy Lift | Redundant Flight Controller",
+      image: "/assets/img/model/gacor-x1.png"
+    },
+    gallery: [
+      "/assets/img/gallery/teknofest-2023/1.jpg",
+      "/assets/img/gallery/teknofest-2023/2.jpg",
+      "/assets/img/gallery/teknofest-2023/3.jpg",
+      "/assets/img/gallery/teknofest-2023/4.jpg",
+      "/assets/img/gallery/teknofest-2023/5.jpg",
+      "/assets/img/gallery/teknofest-2023/6.jpg",
     ]
   }
 ];
