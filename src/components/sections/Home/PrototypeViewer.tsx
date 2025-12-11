@@ -6,26 +6,31 @@ import { OrbitControls, Float, Environment, Stars, useGLTF, Center } from '@reac
 import { motion } from 'framer-motion';
 import { 
   Loader2,
-  MousePointer2
+  MousePointer2,
+  AlertTriangle
 } from 'lucide-react';
 
-const GacorDrone = () => {
-  // Memuat model GLTF milik user
-  // Menggunakan path root '/' karena file diupload di root
-  const { scene } = useGLTF('/assets/uav/gacor.gltf');
+// Daftar UAV yang tersedia
+const uavOptions = [
+  { id: 'gacor', name: 'Gacor X1', path: '/assets/uav/gacor.gltf', scale: 0.1 },
+  { id: 'galakasa', name: 'Galakasa', path: '/assets/uav/galakasa.gltf', scale: 0.1 },
+  { id: 'anak-lanang', name: 'Anak Lanang', path: '/assets/uav/anak-lanang.gltf', scale: 0.1 },
+  { id: 'umar', name: 'Umar', path: '/assets/uav/umar.gltf', scale: 0.1 },
+];
+
+const DroneModel = ({ modelPath, scale }: { modelPath: string; scale: number }) => {
+  const { scene } = useGLTF(modelPath);
 
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
       <Center top>
-        {/* Scale diperkecil agar tidak menutupi kamera (penyebab layar putih) */}
-        {/* Diubah menjadi 0.1 agar lebih kecil dan pas di tengah */}
-        <primitive object={scene} scale={0.1} />
+        <primitive object={scene} scale={scale} />
       </Center>
     </Float>
   );
 };
 
-const SceneContainer = () => {
+const SceneContainer = ({ modelPath, scale }: { modelPath: string; scale: number }) => {
   return (
     // OPTIMASI PERFORMA:
     // 1. shadows={false}: Mematikan bayangan (berat di GPU)
@@ -41,7 +46,7 @@ const SceneContainer = () => {
         <Environment preset="city" />
         
         <group position={[0, -0.5, 0]}>
-          <GacorDrone />
+          <DroneModel modelPath={modelPath} scale={scale} />
         </group>
         
         {/* Jumlah bintang dikurangi drastis untuk performa (1000 -> 500) */}
@@ -64,9 +69,31 @@ const SceneContainer = () => {
 const PrototypeViewer = () => {
   // State untuk melacak apakah komponen sudah masuk viewport
   const [inView, setInView] = useState(false);
+  const [webGLError, setWebGLError] = useState(false);
+  const [selectedUav, setSelectedUav] = useState(uavOptions[0]); // Default: Gacor
   const ref = useRef(null);
 
   useEffect(() => {
+    // Check WebGL support
+    const checkWebGL = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (!gl) {
+          setWebGLError(true);
+          return false;
+        }
+        return true;
+      } catch (e) {
+        setWebGLError(true);
+        return false;
+      }
+    };
+
+    if (!checkWebGL()) {
+      return;
+    }
+
     // Intersection Observer untuk mendeteksi kapan user scroll ke bagian ini
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -103,18 +130,52 @@ const PrototypeViewer = () => {
           <p className="text-slate-400 max-w-md mx-auto text-sm opacity-80">
             Interact with our latest aerodynamic fuselage concept. 
           </p>
+          
+          {/* UAV Selector */}
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <span className="text-slate-400 text-sm font-medium">Select UAV:</span>
+            <select
+              value={selectedUav.id}
+              onChange={(e) => {
+                const selected = uavOptions.find(uav => uav.id === e.target.value);
+                if (selected) setSelectedUav(selected);
+              }}
+              className="bg-slate-800 border border-slate-700 text-white rounded-lg px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#f58a07] hover:border-[#f58a07] transition-colors cursor-pointer"
+            >
+              {uavOptions.map((uav) => (
+                <option key={uav.id} value={uav.id}>
+                  {uav.name}
+                </option>
+              ))}
+            </select>
+          </div>
         </motion.div>
       </div>
 
       {/* The 3D Canvas Container - FULL WIDTH style again */}
       <div className="w-full h-[75vh] border-y border-white/10 bg-gradient-to-b from-slate-900 to-black relative flex items-center justify-center">
           
-          {/* PERFORMA FIX: 
-            Render SceneContainer HANYA jika 'inView' true.
-            Ini mencegah download model 5MB+ saat initial load halaman.
-          */}
-          {inView ? (
-             <SceneContainer />
+          {/* WebGL Error Fallback */}
+          {webGLError ? (
+            <div className="flex flex-col items-center gap-4 text-slate-400 max-w-md px-6 text-center">
+              <AlertTriangle className="w-12 h-12 text-[#f58a07]" />
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">3D Viewer Unavailable</h3>
+                <p className="text-sm leading-relaxed mb-4">
+                  Your browser doesn't support WebGL or hardware acceleration is disabled. 
+                </p>
+                <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-left">
+                  <p className="text-xs font-semibold text-[#f58a07] mb-2">To enable 3D viewer:</p>
+                  <ol className="text-xs space-y-1 list-decimal list-inside">
+                    <li>Enable hardware acceleration in browser settings</li>
+                    <li>Update your graphics drivers</li>
+                    <li>Try a different browser (Chrome, Firefox, Edge)</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          ) : inView ? (
+             <SceneContainer modelPath={selectedUav.path} scale={selectedUav.scale} />
           ) : (
              <div className="flex flex-col items-center gap-2 text-slate-500">
                 <Loader2 className="w-8 h-8 animate-spin text-[#f58a07]" />
@@ -122,8 +183,8 @@ const PrototypeViewer = () => {
              </div>
           )}
           
-          {/* Overlay Controls (Only show if loaded) */}
-          {inView && (
+          {/* Overlay Controls (Only show if loaded and no error) */}
+          {inView && !webGLError && (
             <div className="absolute bottom-10 right-10">
                 <div className="flex items-center gap-2 text-white/70 text-sm bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 font-medium">
                     <MousePointer2 className="w-4 h-4" />
@@ -133,14 +194,16 @@ const PrototypeViewer = () => {
           )}
 
           {/* Overlay Info */}
-          <div className="absolute top-10 left-10 hidden sm:block">
-               <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                  <div className="flex flex-col gap-1 text-xs font-mono text-[#f58a07]">
-                      <div className="flex items-center gap-2"><div className={`w-2 h-2 rounded-full ${inView ? 'bg-green-500 animate-pulse' : 'bg-yellow-500'} `} /> SYSTEM {inView ? 'ONLINE' : 'STANDBY'}</div>
-                      <div>GACOR X1</div>
-                  </div>
-               </div>
-          </div>
+          {!webGLError && (
+            <div className="absolute top-10 left-10 hidden sm:block">
+                 <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                    <div className="flex flex-col gap-1 text-xs font-mono text-[#f58a07]">
+                        <div className="flex items-center gap-2"><div className={`w-2 h-2 rounded-full ${inView ? 'bg-green-500 animate-pulse' : 'bg-yellow-500'} `} /> SYSTEM {inView ? 'ONLINE' : 'STANDBY'}</div>
+                        <div>{selectedUav.name.toUpperCase()}</div>
+                    </div>
+                 </div>
+            </div>
+          )}
       </div>
 
     </section>
