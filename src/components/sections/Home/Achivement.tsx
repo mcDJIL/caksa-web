@@ -11,37 +11,45 @@ import {
 const Achievement = () => {
   const achievements = [
     {
-      year: "2023",
-      title: "1st Place VTOL Division",
-      event: "KRTI National Championship",
-      desc: "Secured gold with our autonomous VTOL prototype 'NIMBUS-X', demonstrating superior precision landing and obstacle avoidance capabilities in high-wind conditions.",
+      year: "2025",
+      title: "1st Runner-Up D1 (Man-Machine)",
+      event: "Singapore Amazing Flying Machine Competition",
+      desc: "In SAFMC 2025, CAKSA competed in the D1 (Man-Machine) category and achieved the Championship Award as 1st Runner-Up in the \"Releasing Payloads at Designated Targets\" mission.",
       icon: Trophy,
-      image: "https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&q=80&w=800"
+      image: "/assets/img/achievements/safmc-2024.jpg"
     },
     {
-      year: "2022",
-      title: "Best Aerodynamic Design",
-      event: "International UAV Innovation",
-      desc: "Recognized for the groundbreaking fuselage design of the 'Sky Warden' which reduced drag coefficient by 15% compared to previous iterations.",
+      year: "2024",
+      title: "Top 10 CAT D1 (Semi-Autonomous)",
+      event: "Singapore Amazing Flying Machine Competition",
+      desc: "The CAKSA Team (Cakrawala Skala) proudly achieved an outstanding result by securing a Top 10 position in the CAT D1 (Semi-Autonomous) category at the Singapore Amazing Flying Machine Competition (SAFMC) 2024. This prestigious event attracted teams from various countries, showcasing cutting-edge UAV technology and innovation.",
       icon: Star,
-      image: "https://plus.unsplash.com/premium_photo-1661856767121-703740e85af9?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      image: "/assets/img/achievements/safmc-2024.jpg"
     },
     {
-      year: "2021",
-      title: "Gold Medal Technology",
-      event: "PIMNAS 34",
-      desc: "Awarded for the development of a rapid-response disaster relief drone swarm system capable of mapping affected areas in real-time.",
-      icon: Medal,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+      year: "2024",
+      title: "Rank 13th Worldwide",
+      event: "TEKNOFEST International UAV Competition",
+      desc: "Competing against hundreds of teams from various countries, CAKRAWALA achieved a remarkable milestone by ranking 13th in the world, outperforming many teams from renowned universities.",
+      icon: Star,
+      image: "/assets/img/achievements/teknofest-2024.jpg"
     },
     {
-      year: "2020",
-      title: "Team Establishment",
-      event: "CAKSA PENS",
-      desc: "Officially formed as a dedicated aeronautics research division under the PENS Robotics Center to advance student research in unmanned systems.",
-      icon: Calendar,
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
-    }
+      year: "2023",
+      title: "Finalist Teknofest UAV",
+      event: "TEKNOFEST International UAV Competition",
+      desc: "The International UAV Competition is one of the main categories at TEKNOFEST 2023, a prestigious technology festival that provides participants the opportunity to design innovative, creative, and sustainable UAVs.",
+      icon: Star,
+      image: "/assets/img/achievements/teknofest-uav.jpg"
+    },
+    {
+      year: "2023",
+      title: "2nd Runner-Up Startup",
+      event: "TEKNOFEST International Startup Competition",
+      desc: "CAKSA competed against thousands of international participants, showcasing the nation's excellence in aerospace technology and youthful innovation. Their outstanding performance earned them the 2nd Runner-Up title in this prestigious global competition.",
+      icon: Trophy,
+      image: "/assets/img/achievements/teknofest-startup.jpg"
+    },
   ];
 
   return (
@@ -123,7 +131,7 @@ const Achievement = () => {
                          <p className="text-slate-400 text-xs uppercase tracking-widest font-bold mb-4">
                            {item.event}
                          </p>
-                         <p className="text-slate-600 text-sm leading-relaxed">
+                         <p className="text-slate-600 text-sm leading-relaxed text-justify">
                            {item.desc}
                          </p>
                        </div>
