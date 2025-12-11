@@ -45,7 +45,7 @@ const Partner = () => {
           className="flex items-center mySwiper"
         >
           {carousel.map((c, idx) => (
-            <SwiperSlide key={idx}>
+            <SwiperSlide key={idx} className='items-center'>
               <img
                 src={c.src}
                 alt={c.alt}
