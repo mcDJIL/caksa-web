@@ -17,7 +17,7 @@
     "@react-three/fiber": "^9.4.2",
     "framer-motion": "^12.23.25",
     "lucide-react": "^0.555.0",
-    "next": "16.0.1",
+    "next": "^16.0.8",
     "react": "19.2.0",
     "react-curved-text": "^3.0.1",
     "react-dom": "19.2.0",
