@@ -14,8 +14,7 @@ import {
 const uavOptions = [
   { id: 'gacor', name: 'Gacor X1', path: '/assets/uav/gacor.gltf', scale: 0.1 },
   { id: 'galakasa', name: 'Galakasa', path: '/assets/uav/galakasa.gltf', scale: 0.1 },
-  { id: 'anak-lanang', name: 'Anak Lanang', path: '/assets/uav/anak-lanang.gltf', scale: 0.1 },
-  { id: 'umar', name: 'Umar', path: '/assets/uav/umar.gltf', scale: 0.1 },
+  { id: 'anak-lanang', name: 'Anak Lanang', path: '/assets/uav/anak-lanang/ASSY Gen 2.gltf', scale: 6.0 },
 ];
 
 const DroneModel = ({ modelPath, scale }: { modelPath: string; scale: number }) => {
