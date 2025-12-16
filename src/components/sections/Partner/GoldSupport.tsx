@@ -39,7 +39,7 @@ const GoldSupport = () => {
             loading="lazy"
           />
           <h1 className="w-full mt-5 text-2xl font-bold text-center lg:text-left">
-            Djarum Foundation Bakti Pendidikan
+            Clev Innovation Labs
           </h1>
           <p className="text-xl text-justify pt-7">
             Clev Innovation Labs adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius voluptatibus necessitatibus esse asperiores, modi repellat ea fugit tenetur quis voluptate laboriosam veritatis magni, architecto velit, rerum unde ut accusantium non..{' '}

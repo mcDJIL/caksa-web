@@ -138,7 +138,7 @@ const News = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mt-12 md:mt-16 lg:mt-20">
                     <div className="flex flex-col relative sm:w-[553px] lg:w-full xl:w-[553px]">
                         <div className="relative w-full">
-                            <div className="hidden sm:block absolute -top-4 -left-4 md:-top-5 md:-left-5 w-32 h-32 md:w-44 md:h-44 lg:w-56 lg:h-56 border-t-20 border-l-20 lg:border-t-28 lg:border-l-28 border-[#084887] z-10 [clip-path:polygon(0_0,100%_0,0_100%)]"></div>
+                            <div className="hidden sm:block absolute -top-5 -left-5 lg:-top-7 lg:-left-7 w-32 h-32 md:w-44 md:h-44 lg:w-56 lg:h-56 border-t-20 border-l-20 lg:border-t-28 lg:border-l-28 border-[#084887] z-10 [clip-path:polygon(0_0,100%_0,0_100%)]"></div>
                             <Image src={newsData[0].image} className='' alt="News" />
                         </div>
 

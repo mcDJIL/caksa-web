@@ -50,7 +50,7 @@ const UAV_HALL_OF_FAME = [
     id: 'anak-lanang',
     name: "Anak Lanang",
     tagline: "The Heavy Lifter",
-    type: "VTOL Fourth Rotorcraft",
+    type: "VTOL",
     role: "Heavy Lift / Combat",
     image: "/assets/img/model/anak-lanang.png",
     specs: [
@@ -66,7 +66,7 @@ const UAV_HALL_OF_FAME = [
     id: 'umar',
     name: "Umar",
     tagline: "Payload Powerhouse",
-    type: "VTOL Fourthcopter",
+    type: "VTOL",
     role: "Payload Delivery / Reconnaissance",
     image: "/assets/img/model/umar.png",
     specs: [
