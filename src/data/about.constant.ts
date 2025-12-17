@@ -136,11 +136,90 @@ export const nontechnical = [
   },
 ];
 
-export const carousel = [
+export const pastmember = [
   {
-    img: '/assets/img/team/carousel/slide1.png',
+    img: '/assets/img/team/pastmember/LEADER GEN 2.png',
+    name: 'Brilian Haidar',
+    position: 'Leader Gen 2 & Mechanical',
   },
   {
-    img: '/assets/img/team/carousel/slide2.png',
+    img: '/assets/img/team/pastmember/COLEADER GEN 2.png',
+    name: 'Rafly Akbar',
+    position: 'Co-Leader Gen 2 & Electrical',
+  },
+  {
+    img: '/assets/img/team/pastmember/ELECTRICAL BILLY GEN 2.png',
+    name: 'Billy Lukito',
+    position: 'Electrical Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/MECHANICAL CHIR GEN 2.png',
+    name: 'Rifky Chirmansyah',
+    position: 'Mechanical Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/MECHANICAL PUNTA GEN 2.png',
+    name: 'Bintang Punta',
+    position: 'Mechanical Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/VISION MARCEL GEN 2.png',
+    name: 'Marcell Nandana',
+    position: 'Vision Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/VISION MADE GEN 2.png',
+    name: 'I Made Arya',
+    position: 'Vision Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/VISION WISNU GEN 2.png',
+    name: 'Wisnu Agung',
+    position: 'Vision Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/PM IKHWAL GEN 2.png',
+    name: 'IKhwal Anugrah',
+    position: 'Project Manager Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/BRANDING DEVIANA GEN 2.png',
+    name: 'Deviana Syifa',
+    position: 'Branding Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/BRANDING DESWI GEN 2.png',
+    name: 'Putri Deswicyntari',
+    position: 'Branding Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/BRANDING NAUFAL GEN 2.png',
+    name: 'Naufal Maulana',
+    position: 'Branding Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/ADMIN RIZKA GEN 2.png',
+    name: 'Rizka Rasyida',
+    position: 'Administration Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/ADMIN NADYA GEN 2.png',
+    name: 'Nadya Mutiara',
+    position: 'Administration Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/SPONSOR NISRINA GEN 2.png',
+    name: 'Nisrina Rahma',
+    position: 'Sponsorship Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/SPONSOR ZULFIAH GEN 2.png',
+    name: 'Zulfiah Rahma',
+    position: 'Sponsorship Gen 2',
+  },
+  {
+    img: '/assets/img/team/pastmember/SPONSOR RAKA GEN 2.png',
+    name: 'Rakha Farid',
+    position: 'Sponsorship Gen 2',
   },
 ];
