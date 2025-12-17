@@ -55,7 +55,7 @@ export default function RootLayout({ children } : RootLayoutProps) {
   return (
     <html lang="id">
       <head>
-        <meta name="google-site-verification" content="UTifrtc-TwL0ZOg02VdKEfqQSVnCfMk7aNgqsG34cIA" />
+        <meta name="google-site-verification" content="UTifrtc-TwL0ZOg02VdKEfqQSVnCfMk7aNgqsG34cIA" />  
       </head>
       <body>
         <MainLayout>{children}</MainLayout>
