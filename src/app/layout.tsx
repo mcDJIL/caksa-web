@@ -18,13 +18,13 @@ export const metadata = {
     'UAV',
     'aeronotika',
   ],
-  authors: [{ name: 'Tim CAKSA PENS', url: 'https://caksa-pens.vercel.app' }],
+  authors: [{ name: 'Tim CAKSA PENS', url: 'https://caksa.id' }],
   openGraph: {
     title: 'CAKSA PENS — Tim Riset Aeronatics',
     description:
       'Tim Riset Aeronatics CAKSA PENS — profil, proyek, dan publikasi.',
     siteName: 'CAKSA PENS',
-    url: 'https://caksa-pens.example/',
+    url: 'https://caksa.id/',
     images: [
       {
         url: '/assets/img/logo.png',
@@ -56,6 +56,7 @@ export default function RootLayout({ children } : RootLayoutProps) {
     <html lang="id">
       <head>
         <meta name="google-site-verification" content="UTifrtc-TwL0ZOg02VdKEfqQSVnCfMk7aNgqsG34cIA" />  
+        <link rel="icon" href="/favicon.ico" sizes="48x48"></link>
       </head>
       <body>
         <MainLayout>{children}</MainLayout>

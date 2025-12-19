@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Galeri CAKSA PENS — Dokumentasi Proyek & Prototipe UAV',
     description:
       'Telusuri dokumentasi proyek, prototipe UAV, dan momen riset tim CAKSA PENS.',
-    url: 'https://caksa-pens.vercel.app/gallery',
+    url: 'https://caksa.id/gallery',
     siteName: 'CAKSA PENS',
     locale: 'id_ID',
     type: 'website',

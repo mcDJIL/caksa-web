@@ -2,9 +2,9 @@ import React from 'react';
 import Homepage from '../pages/Home/Home';
 
 export const metadata = {
-  title: 'CAKSA PENS — Tim Riset Aeronatics (UAV) PENS',
+  title: 'CAKSA PENS — Tim Riset Aeronatics (UAV) Politeknik Elektronika Negeri Surabaya',
   description:
-    'Tim Riset Aeronatics CAKSA PENS: penelitian UAV, publikasi, dan kolaborasi industri-akademia. Pelajari proyek kami & bergabung dalam inisiatif R&D.',
+    'Situs resmi CAKSA PENS, tim riset kedirgantaraan peraih juara SAFMC 2025. Temukan informasi tentang penelitian, proyek, dan publikasi kami di bidang UAV dan aeronotika.',
   keywords: ['CAKSA', 'CAKSA PENS', 'PENS', 'Aeronatics', 'UAV', 'riset'],
 };
 
@@ -12,8 +12,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: 'Tim Riset Aeronatics CAKSA PENS',
-  url: 'https://caksa-pens.vercel.app/',
-  logo: 'https://caksa-pens.vercel.app/assets/img/logo.png',
+  url: 'https://caksa.id/',
+  logo: 'https://caksa.id/assets/img/logo.png',
   sameAs: [
     'https://www.instagram.com/caksaeepis/',
     'https://www.linkedin.com/company/caksa-eepis/',
