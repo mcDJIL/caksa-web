@@ -7,7 +7,7 @@ export const social = [
     name: 'Linked In',
     href: 'https://www.linkedin.com/company/caksa-eepis/',
   },
-  { name: 'Tiktok', href: 'https://tiktok.com/username' },
+  { name: 'Tiktok', href: 'https://www.tiktok.com/@caksaeepis' },
   {
     name: 'Youtube',
     href: 'https://www.youtube.com/@caksaeepis',
@@ -22,7 +22,7 @@ export const contact = [
 export const menu = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '/about' },
-  { name: 'Competition', href: '/' },
+  { name: 'Competition', href: '/gallery' },
   { name: 'Partner', href: '/partner' },
 ];
 

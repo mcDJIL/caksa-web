@@ -5,7 +5,7 @@ export const metadata = {
   title: 'CAKSA PENS — Tim Riset Aeronatics (UAV) Politeknik Elektronika Negeri Surabaya',
   description:
     'Situs resmi CAKSA PENS, tim riset kedirgantaraan peraih juara SAFMC 2025. Temukan informasi tentang penelitian, proyek, dan publikasi kami di bidang UAV dan aeronotika.',
-  keywords: ['CAKSA', 'CAKSA PENS', 'PENS', 'Aeronatics', 'UAV', 'riset'],
+  keywords: ['CAKSA', 'CAKSA PENS', 'PENS', 'Aeronatics', 'UAV', 'riset', 'Tim Robot PENS', 'Tim UAV PENS', 'Tim Robot Terbang PENS', 'Tim Riset PENS', 'Tim Robotika PENS'],
 };
 
 const organizationSchema = {
@@ -13,7 +13,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: 'Tim Riset Aeronatics CAKSA PENS',
   url: 'https://caksa.id/',
-  logo: 'https://caksa.id/assets/img/logo.png',
+  logo: 'https://caksa.id/assets/favicon.ico',
   sameAs: [
     'https://www.instagram.com/caksaeepis/',
     'https://www.linkedin.com/company/caksa-eepis/',

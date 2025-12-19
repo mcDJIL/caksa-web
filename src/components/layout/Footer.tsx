@@ -62,7 +62,7 @@ const Footer = () => {
                     passionate individuals with diverse academic backgrounds.
                   </h1>
                   <h1 className="text-[#F58A07] lg:text-base xl:text-2xl pt-8">
-                    caksa2024@gmail.com
+                    caksaeepis@gmail.com
                   </h1>
                 </div>
               </div>

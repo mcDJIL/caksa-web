@@ -9,7 +9,7 @@ export const metadata = {
     template: '%s | CAKSA PENS',
   },
   description:
-    'Profil Tim Riset Aeronatics CAKSA PENS — penelitian, proyek, publikasi, dan kolaborasi di bidang aeronotika.',
+    'Profil Tim Riset Aeronatics CAKSA PENS — penelitian, proyek, publikasi, dan kolaborasi di bidang aeronotika dan robotika.',
   keywords: [
     'CAKSA',
     'PENS',
@@ -17,6 +17,11 @@ export const metadata = {
     'tim riset',
     'UAV',
     'aeronotika',
+    'Tim Robot PENS', 
+    'Tim UAV PENS', 
+    'Tim Robot Terbang PENS', 
+    'Tim Riset PENS', 
+    'Tim Robotika PENS'
   ],
   authors: [{ name: 'Tim CAKSA PENS', url: 'https://caksa.id' }],
   openGraph: {
@@ -27,7 +32,7 @@ export const metadata = {
     url: 'https://caksa.id/',
     images: [
       {
-        url: '/assets/img/logo.png',
+        url: '/assets/favicon.ico',
         alt: 'CAKSA PENS logo',
       },
     ],
@@ -39,7 +44,7 @@ export const metadata = {
     title: 'CAKSA PENS — Tim Riset Aeronatics',
     description:
       'Profil Tim Riset Aeronatics CAKSA PENS — penelitian, publikasi, dan kolaborasi.',
-    images: ['/assets/img/logo.png'],
+    images: ['/assets/favicon.ico'],
   },
   robots: {
     index: true,
@@ -57,6 +62,23 @@ export default function RootLayout({ children } : RootLayoutProps) {
       <head>
         <meta name="google-site-verification" content="UTifrtc-TwL0ZOg02VdKEfqQSVnCfMk7aNgqsG34cIA" />  
         <link rel="icon" href="/favicon.ico" sizes="48x48"></link>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "CAKSA PENS",
+              "alternateName": "Tim Robot PENS - Cakrawala Skala",
+              "url": "https://caksa.id",
+              "parentOrganization": {
+                "@type": "CollegeOrUniversity",
+                "name": "Politeknik Elektronika Negeri Surabaya"
+              },
+              "award": "2nd Place SAFMC 2025"
+            })
+          }}
+        />
       </head>
       <body>
         <MainLayout>{children}</MainLayout>

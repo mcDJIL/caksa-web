@@ -34,7 +34,7 @@ const UAV_HALL_OF_FAME = [
     id: 'galakasa',
     name: "Galakasa",
     tagline: "Speed Demon of the Skies",
-    type: "Fixed Wing",
+    type: "VTOL Hybrid",
     role: "High Speed",
     image: "/assets/img/model/galakasa.png",
     specs: [
@@ -50,11 +50,11 @@ const UAV_HALL_OF_FAME = [
     id: 'anak-lanang',
     name: "Anak Lanang",
     tagline: "The Heavy Lifter",
-    type: "VTOL",
+    type: "Quadcopter",
     role: "Heavy Lift / Combat",
     image: "/assets/img/model/anak-lanang.png",
     specs: [
-        { label: "Payload", value: "8.0 kg", icon: <Scale size={18} /> },
+        { label: "Weight", value: "8.0 kg", icon: <Scale size={18} /> },
         { label: "Max Lift", value: "12.0 kg", icon: <Gauge size={18} /> },
         { label: "Battery", value: "2x 6S 22Ah", icon: <Battery size={18} /> },
         { label: "Comms", value: "Long Range RF", icon: <Cpu size={18} /> }
@@ -66,11 +66,11 @@ const UAV_HALL_OF_FAME = [
     id: 'umar',
     name: "Umar",
     tagline: "Payload Powerhouse",
-    type: "VTOL",
+    type: "Quadcopter",
     role: "Payload Delivery / Reconnaissance",
     image: "/assets/img/model/umar.png",
     specs: [
-        { label: "Payload", value: "8.0 kg", icon: <Scale size={18} /> },
+        { label: "Weight", value: "8.0 kg", icon: <Scale size={18} /> },
         { label: "Max Lift", value: "12.0 kg", icon: <Gauge size={18} /> },
         { label: "Battery", value: "2x 6S 22Ah", icon: <Battery size={18} /> },
         { label: "Comms", value: "Long Range RF", icon: <Cpu size={18} /> }
