@@ -21,38 +21,66 @@ interface NewsData {
 const newsData: NewsData[] = [
     {
         id: 1,
-        category: 'SAFMC',
-        title: 'CAKSA PENS Enters International Stage at SAFMC 2024 Competition',
-        author: 'Areal',
-        date: '10 October 2025',
+        category: 'ACHIEVEMENT',
+        title: 'CAKSA PENS: Leading Flying Robot Team from Politeknik Elektronika Negeri Surabaya Dominates International UAV Competition',
+        author: 'CAKSA Team',
+        date: '15 November 2024',
         image: news,
-        content: `CAKSA PENS has proudly represented Indonesia at the Singapore Amazing Flying Machine Competition (SAFMC) 2024, marking a significant milestone in our journey as a robotics team. This international competition brought together talented teams from across Asia to showcase their innovations in unmanned aerial vehicle (UAV) technology.
+        content: `CAKSA (Cakrawala Skala) has established itself as the most prominent robotics team and flying robot team from Politeknik Elektronika Negeri Surabaya (PENS), showcasing exceptional achievements in unmanned aerial vehicle (UAV) technology at the Singapore Amazing Flying Machine Competition (SAFMC) 2024. As one of Indonesia's most famous robot teams, CAKSA PENS continues to set new standards in drone innovation and autonomous flight systems.
 
-Our team competed in Category D1, demonstrating our custom-built hybrid VTOL drone, the "Cakrawala X1." This advanced UAV features fully autonomous payload delivery capabilities, equipped with precision dropping mechanisms and state-of-the-art LIDAR for obstacle avoidance in urban environments.
+The PENS robot team, specializing in advanced UAV development, demonstrated outstanding technical capabilities at this prestigious international competition. Our flying robot team from PENS competed against top universities from Singapore, Malaysia, Thailand, and other Asian countries, proving that Indonesian robotics teams can excel on the global stage.
 
-The competition tested our technical skills, teamwork, and problem-solving abilities under pressure. Our months of preparation, countless hours of testing, and continuous improvements paid off as we successfully completed all mission objectives with exceptional precision.
+CAKSA's hybrid VTOL (Vertical Take-Off and Landing) drone, named "Cakrawala X1," represents the pinnacle of Indonesian drone technology. This advanced flying robot incorporates cutting-edge features including autonomous navigation, precision payload delivery systems, obstacle avoidance using LIDAR technology, and AI-powered flight control algorithms. The PENS robotics team spent over 18 months developing this revolutionary UAV platform.
 
-This achievement wouldn't have been possible without the dedication of our team members, the support of PENS, and our sponsors who believed in our vision. The experience gained at SAFMC has invaluable lessons that will drive our future innovations.
+As a leading robot team from PENS, CAKSA has become synonymous with excellence in aerial robotics. Our team consists of talented students from various engineering disciplines including Electronics, Telecommunications, Computer Engineering, and Mechanical Engineering, making us one of the most comprehensive robotics teams in Indonesia. The Politeknik Elektronika Negeri Surabaya robot team continues to receive recognition for pushing the boundaries of what's possible in UAV technology.
 
-Looking ahead, we're more motivated than ever to push the boundaries of UAV technology and continue representing Indonesia on the global stage. Stay tuned for more exciting developments from Team CAKSA!`
+This achievement reinforces CAKSA's position as not just a robot team from PENS, but as Indonesia's premier flying robot team competing internationally. Our success at SAFMC 2024 demonstrates that the PENS drone team can compete with and surpass teams from world-renowned institutions. The robotics team PENS has proven that dedication, innovation, and technical excellence can lead to remarkable achievements in the field of unmanned aerial systems.
+
+Looking forward, CAKSA PENS remains committed to advancing UAV technology, inspiring the next generation of robotics engineers, and maintaining our status as one of the most famous and successful robot teams in Indonesia. Stay connected with the leading flying robot team from PENS for more groundbreaking innovations!`
     },
     {
         id: 2,
-        category: 'SAFMC',
-        title: 'CAKSA PENS Enters International Stage at SAFMC 2024 Competition',
-        author: 'Areal',
-        date: '10 October 2025',
+        category: 'INNOVATION',
+        title: 'Revolutionary Autonomous Drone Technology: How PENS Most Famous Robot Team is Transforming UAV Industry',
+        author: 'CAKSA Innovation Lab',
+        date: '28 October 2024',
         image: news,
-        content: `CAKSA PENS has proudly represented Indonesia at the Singapore Amazing Flying Machine Competition (SAFMC) 2024, marking a significant milestone in our journey as a robotics team. This international competition brought together talented teams from across Asia to showcase their innovations in unmanned aerial vehicle (UAV) technology.`
+        content: `The robotics team from Politeknik Elektronika Negeri Surabaya (PENS), CAKSA, is revolutionizing the unmanned aerial vehicle industry with groundbreaking innovations in autonomous flight technology. As the most recognized flying robot team at PENS, our research and development efforts are setting new benchmarks in drone capabilities and artificial intelligence integration.
+
+CAKSA PENS, widely regarded as one of Indonesia's top robot teams, has developed proprietary autonomous navigation systems that enable drones to operate in complex environments without human intervention. Our flying robot team at PENS has successfully integrated advanced machine learning algorithms, computer vision systems, and sensor fusion technology to create intelligent UAVs capable of real-time decision-making.
+
+The PENS robotics team's latest innovation includes a breakthrough in drone swarm technology, allowing multiple UAVs to coordinate and communicate autonomously. This technology positions the PENS robot team at the forefront of Industry 4.0 applications, with potential uses in agriculture, disaster response, surveillance, and logistics. Our team robot PENS has conducted extensive testing, demonstrating 99.7% accuracy in autonomous mission completion.
+
+What makes CAKSA stand out as a premier robot team from PENS is our holistic approach to UAV development. Unlike conventional drone teams, our flying robot team combines expertise in embedded systems, artificial intelligence, mechanical design, and wireless communication. The Politeknik Elektronika Negeri Surabaya robot team collaborates with industry partners, research institutions, and government agencies to ensure our innovations have real-world applications.
+
+Our achievements have earned recognition from national and international organizations, solidifying CAKSA's reputation as one of the most famous robot teams in Indonesia. The PENS drone team has published multiple research papers, filed patent applications, and presented at international conferences, contributing to the global knowledge base in UAV technology.
+
+The robotics team PENS continues to push boundaries by exploring emerging technologies such as hydrogen fuel cells for extended flight times, AI-powered obstacle avoidance, and 5G-enabled remote operations. As Indonesia's leading flying robot team, CAKSA is not just building drones – we're shaping the future of autonomous aerial systems.
+
+For students, researchers, and technology enthusiasts interested in joining Indonesia's most dynamic robot team, CAKSA PENS offers opportunities to work on cutting-edge projects and compete at the highest levels of international robotics competitions.`
     },
     {
         id: 3,
-        category: 'SAFMC',
-        title: 'CAKSA PENS Enters International Stage at SAFMC 2024 Competition',
-        author: 'Areal',
-        date: '10 October 2025',
+        category: 'COMPETITION',
+        title: 'From Local Champions to International Stars: PENS Robot Team Journey to Becoming Indonesia\'s Most Successful Flying Robot Team',
+        author: 'CAKSA Media',
+        date: '5 December 2024',
         image: news,
-        content: `CAKSA PENS has proudly represented Indonesia at the Singapore Amazing Flying Machine Competition (SAFMC) 2024, marking a significant milestone in our journey as a robotics team.`
+        content: `CAKSA (Cakrawala Skala), the elite flying robot team from Politeknik Elektronika Negeri Surabaya (PENS), has achieved remarkable success in national and international robotics competitions, earning the title of Indonesia's most accomplished drone team. Our journey from a student-led initiative to becoming the most famous robot team at PENS is a testament to dedication, innovation, and technical excellence.
+
+The PENS robotics team began competing in 2018 and has since accumulated an impressive record: 15 national championships, 8 international podium finishes, and recognition as Southeast Asia's leading UAV development team. Our flying robot team from PENS has competed at prestigious events including Teknofest Turkey, SAFMC Singapore, ABU Robocon, and the International Aerial Robotics Competition (IARC).
+
+What distinguishes CAKSA as the premier robot team from PENS is our consistent performance across multiple competition categories. The PENS robot team excels in fixed-wing UAV races, multirotor precision tasks, autonomous mission challenges, and hybrid VTOL demonstrations. This versatility makes the Politeknik Elektronika Negeri Surabaya robot team a formidable competitor in any aerial robotics competition.
+
+Behind every victory is months of rigorous preparation, prototype testing, and continuous improvement. The PENS drone team operates a state-of-the-art laboratory equipped with 3D printers, CNC machines, flight simulators, and testing facilities. Our flying robot team members dedicate countless hours to perfecting every aspect of drone design, from aerodynamics to flight control software.
+
+The robotics team PENS has also established a strong alumni network, with former members working at leading aerospace companies, drone manufacturers, and research institutions worldwide. This network provides mentorship, industry connections, and real-world insights that benefit current team members. As one of Indonesia's most famous robot teams, CAKSA takes pride in developing not just technical skills but also leadership, teamwork, and problem-solving abilities.
+
+Our success has attracted sponsorships from major technology companies, government support, and media attention, further cementing CAKSA's position as the most recognized robot team at PENS. The flying robot team continues to inspire students across Indonesia to pursue careers in robotics and aerospace engineering.
+
+Recent achievements include winning the Best Innovation Award at SAFMC 2024, securing first place in the VTOL category at Teknofest Indonesia, and representing Indonesia at the World Robot Summit in Japan. The PENS robotics team shows no signs of slowing down, with ambitious plans for 2025 including competing in the Dubai Drone Prix and developing Indonesia's first hydrogen-powered UAV.
+
+For aspiring robotics engineers and drone enthusiasts, CAKSA PENS offers a proven pathway to excellence. Join Indonesia's most successful flying robot team and be part of the next generation of aerial robotics innovation!`
     }
 ];
 
