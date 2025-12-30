@@ -13,7 +13,7 @@ import {
 // Daftar UAV yang tersedia
 const uavOptions = [
   { id: 'gacor', name: 'Gacor X1', path: '/assets/uav/gacor.gltf', scale: 0.1 },
-  { id: 'galakasa', name: 'Galakasa', path: '/assets/uav/galakasa.gltf', scale: 0.1 },
+  { id: 'galakasa', name: 'Galakasa', path: '/assets/uav/galakasa/galakasa.gltf', scale: 6.0 },
   { id: 'anak-lanang', name: 'Anak Lanang', path: '/assets/uav/anak-lanang/ASSY Gen 2.gltf', scale: 6.0 },
 ];
 
