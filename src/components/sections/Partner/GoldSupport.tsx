@@ -15,36 +15,21 @@ const GoldSupport = () => {
       <h1 className="text-4xl italic font-bold text-center font-poppins">
         <span className="text-[#084887]">Gold </span>Support
       </h1>
-      <div className="flex flex-col items-center justify-between gap-20 mt-24 lg:flex-row">
-        <img
-          src={Clev}
-          alt="gold support"
-          className="bg-center bg-cover w-96 rounded-2xl lg:hidden"
-          loading="lazy"
-        />
-        <div className="flex-1">
-          <video
-            src={VideoDjarum}
-            autoPlay
-            loop
-            muted
-            className="w-full aspect-video"
-          ></video>
-        </div>
-        <div className="flex-1">
+      <div className="flex flex-col items-center justify-center gap-20 mt-24">
+        <div className="flex-1 max-w-2xl">
           <img
             src={Clev}
-            alt=""
-            className="hidden bg-center bg-cover w-96 rounded-2xl lg:block"
+            alt="Clev Innovation Labs"
+            className="bg-center bg-cover w-96 rounded-2xl mx-auto"
             loading="lazy"
           />
-          <h1 className="w-full mt-5 text-2xl font-bold text-center lg:text-left">
+          <h1 className="w-full mt-5 text-2xl font-bold text-center">
             Clev Innovation Labs
           </h1>
-          <p className="text-xl text-justify pt-7">
+          <p className="text-xl text-center pt-7">
             Clev Innovation Labs adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius voluptatibus necessitatibus esse asperiores, modi repellat ea fugit tenetur quis voluptate laboriosam veritatis magni, architecto velit, rerum unde ut accusantium non..{' '}
           </p>
-          <div className="flex justify-center w-full pt-8 lg:justify-start font-poppins">
+          <div className="flex justify-center w-full pt-8 font-poppins">
             <a
               href="https://www.djarumfoundation.org/"
               target="_blank"
