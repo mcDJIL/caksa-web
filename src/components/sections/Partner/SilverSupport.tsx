@@ -1,11 +1,8 @@
 import React from 'react';
 
-const Akhishop = '/assets/img/partner/akhishop.png';
-const Isen = '/assets/img/partner/isen.png';
-const Istana = '/assets/img/partner/istana.png';
-const Theater = '/assets/img/partner/theater.png';
-const Spectrum = '/assets/img/partner/spectrum.png';
-const Buaya = '/assets/img/partner/buaya.png';
+const Ypti = '/assets/img/partner/pt-ypti.jpg';
+const BuayaAerotech = '/assets/img/partner/buaya-aerotech.png';
+const QProp = '/assets/img/partner/qprop.png';
 
 const Logo = '/assets/img/partner/logo.png';
 const LogoIpsum = '/assets/img/partner/logo-ipsum.png';
@@ -18,21 +15,21 @@ const SilverSupport = () => {
         <span className="text-[#084887]">Silver</span>{' '}Support
       </h1>
       <div className="grid grid-cols-1 gap-10 px-5 mt-16 place-items-center">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-3 place-items-center">
           <img
-            src={LogoIpsum}
+            src={Ypti}
             alt="support"
             className="w-auto h-auto bg-cover md:w-44"
             loading="lazy"
           />
           <img
-            src={Logo}
+            src={BuayaAerotech}
             alt="support"
             className="w-auto h-auto bg-cover md:w-44"
             loading="lazy"
           />
           <img
-            src={LogoIpsum2}
+            src={QProp}
             alt="support"
             className="w-auto h-auto bg-cover md:w-44"
             loading="lazy"

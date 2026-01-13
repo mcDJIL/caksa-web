@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Clev = '/assets/img/partner/clev-innovation-labs.png';
+const Ypti = '/assets/img/partner/pt-ypti.jpg';
+const BuayaAerotech = '/assets/img/partner/buaya-aerotech.png';
+const QProp = '/assets/img/partner/qprop.png';
 const Akhishop = '/assets/img/partner/akhishop.png';
 const Isen = '/assets/img/partner/isen.png';
 const Istana = '/assets/img/partner/istana.png';
@@ -19,34 +22,28 @@ const Support = () => {
           <img src={Clev} alt="support" className="bg-cover" loading="lazy" />
         </div>
 
-        {/* <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 place-items-center">
           <img
-            src={Akhishop}
+            src={Ypti}
             alt="support"
-            className="w-auto h-auto bg-cover md:h-58 md:w-60"
+            className="w-auto h-auto bg-cover md:w-60"
             loading="lazy"
           />
           <img
-            src={Isen}
+            src={BuayaAerotech}
             alt="support"
-            className="w-auto h-auto bg-cover md:h-48 md:w-60"
+            className="w-auto h-auto bg-cover md:w-60"
             loading="lazy"
           />
           <img
-            src={Istana}
+            src={QProp}
             alt="support"
-            className="w-auto h-auto bg-cover md:w-64 md:h-44"
-            loading="lazy"
-          />
-          <img
-            src={Theater}
-            alt="support"
-            className="w-auto h-auto bg-cover md:h-44 px-7"
+            className="w-auto h-auto bg-cover md:h-44"
             loading="lazy"
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-5">
+        {/* <div className="grid grid-cols-2 gap-5">
           <img
             src={Spectrum}
             alt="support"
