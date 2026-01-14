@@ -80,7 +80,7 @@ export default function RootLayout({ children } : RootLayoutProps) {
     <html lang="id">
       <head>
         <meta name="google-site-verification" content="UTifrtc-TwL0ZOg02VdKEfqQSVnCfMk7aNgqsG34cIA" />  
-        <link rel="icon" href="/favicon.ico" sizes="48x48"></link>
+        <link rel="icon" href="/favicon.ico"></link>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
