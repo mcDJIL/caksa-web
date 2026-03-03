@@ -4,6 +4,7 @@ const Clev = '/assets/img/partner/clev-innovation-labs.png';
 const Ypti = '/assets/img/partner/pt-ypti.jpg';
 const BuayaAerotech = '/assets/img/partner/buaya-aerotech.png';
 const QProp = '/assets/img/partner/qprop.png';
+const Djarum = '/assets/img/partner/djarum-foundation.png'
 const Akhishop = '/assets/img/partner/akhishop.png';
 const Isen = '/assets/img/partner/isen.png';
 const Istana = '/assets/img/partner/istana.png';
@@ -18,8 +19,9 @@ const Support = () => {
         All <span className="text-[#084887]">Support</span>{' '}
       </h1>
       <div className="grid grid-cols-1 gap-10 px-5 mt-16 place-items-center">
-        <div className="grid grid-cols-1 gap-10">
+        <div className="grid grid-cols-2 gap-10 place-items-center">
           <img src={Clev} alt="support" className="bg-cover" loading="lazy" />
+          <img src={Djarum} alt="support" className="bg-cover w-[380px]" loading="lazy" />
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 place-items-center">
